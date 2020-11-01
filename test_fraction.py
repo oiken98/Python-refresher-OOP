@@ -7,7 +7,6 @@
 import pytest
 import numpy as np
 
-
 class Fraction(object):
 
     def __init__(self, a, b):
@@ -20,6 +19,7 @@ class Fraction(object):
         self.test += 1
 
     def get_reduced_form(self):
+        """return the reduced form of the fraction a/b"""
         gcd = np.gcd(self.a, self.b)
         if self.reduced_from != f'{self.a//gcd}/{self.b//gcd}':
             self.reduced_from = f'{self.a//gcd}/{self.b//gcd}'
